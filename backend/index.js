@@ -171,6 +171,9 @@ const profileRoutes = require("./routes/profileRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 const groupRoutes = require("./routes/groupRoutes");
 
+app.get("/", (req, res) => {
+    res.send("API is running....");
+  })
 app.use("/api/v1", authRoutes);
 app.use("/api/v1", profileRoutes);
 app.use("/api/v1", chatRoutes);
